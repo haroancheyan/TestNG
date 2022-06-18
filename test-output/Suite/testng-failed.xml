@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="url" value="https://www.flipkart.com/"/>
+  <test name="Test">
+    <parameter name="url" value="https://www.flipkart.com/"/>
+    <groups>
+      <run>
+        <include name="default"/>
+        <include name="haroan"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.flipkart.stepdefination.TvPurchase2"/>
+      <class name="com.flipkart.stepdefination.MobilePurchase"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <parameter name="url" value="https://www.flipkart.com/"/>
+    <groups>
+      <run>
+        <include name="default"/>
+        <include name="haroan"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.flipkart.stepdefination.TvPurchase2">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="quit"/>
+          <include name="beforeMethod"/>
+          <include name="method3"/>
+          <include name="launch"/>
+        </methods>
+      </class> <!-- com.flipkart.stepdefination.TvPurchase2 -->
+      <class name="com.flipkart.stepdefination.MobilePurchase">
+        <methods>
+          <include name="method3"/>
+          <include name="method1"/>
+          <include name="method2"/>
+          <include name="launch"/>
+        </methods>
+      </class> <!-- com.flipkart.stepdefination.MobilePurchase -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
